@@ -1,0 +1,68 @@
+:root {
+  --color-gradient: linear-gradient(50deg,#121e6c 70%,#ee424e);
+  --color-gradient-50: linear-gradient(90deg,#121e6c 0%,#ee424e);
+  --color-gradient-100: linear-gradient(90deg,#121e6c 0%,#322468);
+  --color-gradient-200: linear-gradient(90deg,#3a2567 0%,#592a63);
+  --color-gradient-300: linear-gradient(90deg,#5d2b62 0%,#7e305e);
+  --color-gradient-400: linear-gradient(90deg,#85315d 0%,#a53759);
+  --color-gradient-500: linear-gradient(90deg,#a93758 0%,#c83c54);
+  --color-gradient-600: linear-gradient(90deg,#cd3d53 0%,#ee424e);
+  --color-white: #FFF;
+  --color-gray: #F3F3F3;
+  --color-red: #ef434e;
+  --color-azul: #111e6c;
+  --padding-content: 0 60px;
+  --padding-total: 60px;
+}
+
+.container-app {
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
+  padding: var(--padding-total);
+  padding-bottom: 60px;
+}
+
+table {
+	border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif;
+}
+table th  {
+  font-weight: 600;
+  text-align: left;
+}
+table td, table th {
+	padding: 15px;
+  background-color: #ffffff;
+}
+
+table thead tr:nth-child(1) th{
+  background-image: var(--color-gradient);
+  color: #FFF;
+  text-align: left;
+  border-radius: 20px 20px 0 0;
+}
+table thead td {
+	background-color: #54585d;
+	color: #ffffff;
+	font-weight: normal;
+	font-size: 13px;
+	border: 1px solid #54585d;
+}
+table tbody td {
+	color: #636363;
+	border: 1px solid #dddfe1;
+}
+table tbody tr {
+	background-color: #f9fafb;
+}
+table tbody tr:nth-child(odd) {
+	background-color: #ffffff;
+}
+
+.btn.btn-active {
+  background-color: var(--color-red);
+  opacity: .7;
+  border-radius: 20px;
+  width: 200px;
+  color: var(--color-white)
+}
