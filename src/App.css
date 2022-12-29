@@ -12,6 +12,7 @@
   --color-red: #ef434e;
   --color-azul: #111e6c;
   --padding-content: 0 60px;
+  --padding-movil: 0 20px;
   --padding-total: 60px;
 }
 
@@ -20,6 +21,13 @@
   grid-template-columns: .7fr 1.3fr;
   padding: var(--padding-total);
   padding-bottom: 60px;
+}
+
+@media (max-width: 840px){
+  .container-app  {
+    grid-template-columns: 1fr;
+    padding: var(--padding-movil);
+  }
 }
 
 table {

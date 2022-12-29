@@ -1,6 +1,12 @@
 .content-table {
     padding: var(--padding-content);
+    @media (max-width: 840px){
+        padding: var(--padding-movil);
+    }
     table {
         width: 100%;
     }
+}
+.overflow {
+    overflow-x:auto
 }
