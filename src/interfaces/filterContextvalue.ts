@@ -11,7 +11,12 @@
     transactionId: string;
     amount: number;
     deductionBold: number;
-    isCobroDatafono?: boolean;
-    isCobroLink?: boolean;
+    cobro: string;
     transactionLabel?: string;
+}
+
+export interface CategorysInterfaces {
+  name: string;
+  value: string;
+  state: boolean,
 }

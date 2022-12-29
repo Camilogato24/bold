@@ -1,11 +1,13 @@
-import React from 'react'
-import { useApp } from '../../hooks/useFilter'
+import React, { useContext } from 'react'
 import { useTable } from 'react-table'
 import './ventas.scss'
+import { DataContext } from '../../context/dataProvider'
 
 
 const Ventas = () => {
-  const { dataPay } = useApp()
+  // const { dataPay } = useApp()
+  const { data } = useContext(DataContext);
+
 
 function Table({ columns, data }: any) {
   const {
@@ -76,9 +78,10 @@ function Table({ columns, data }: any) {
     ],
     []
   )
+  const dataSession = sessionStorage.getItem("state");
   return (
     <div className='content-table'>
-      <Table columns={columns} data={dataPay} />
+      <Table columns={columns} data={data} />
     </div>
   )
 }
