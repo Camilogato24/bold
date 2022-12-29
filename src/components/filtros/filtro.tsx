@@ -17,6 +17,7 @@ const Filtro = () => {
   const [dataFilterDate, setDataFilterDate] = useState<Pay[]>(data);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [ifFilter, setIfFilter] = useState<boolean>(false);
+  const [isActiveBtn, setIsActiveBtn] = useState<boolean[]>([false, false, false]);
 
   const handleCategoryAll = () => {
     const allCategory: CategorysInterfaces[] = categories.map((item) => ({
@@ -63,20 +64,28 @@ const Filtro = () => {
     setData(dataFilterDate)
   }
   const filterByDate = (time: string) => {
+    setIsActiveBtn([false, false, false])
     setDataFilterDate(data)
     setIfFilter(true)
     setData(data.filter(item => item.date === time))
+    setIsActiveBtn([true, false, false])
   }
   const filterByDateWeek = (date: Date[]) => {
+    setIsActiveBtn([false, false, false])
     setDataFilterDate(data)
     setIfFilter(true)
     setData(data.filter(item => new Date(item.date) > new Date(date[0].toLocaleString()) 
     && new Date(item.date) < new Date(date[1].toLocaleString())))
+    setIsActiveBtn([false, true, false])
+
   }
   const filterByDateMonth = (time: number) => {
+    setIsActiveBtn([false, false, false])
     setDataFilterDate(data)
     setIfFilter(true)
     setData(data.filter(item => Number(new Date(item.date).getMonth()) === Number(time) ))
+    setIsActiveBtn([false, false, true])
+
   }
    return (
     <div className='filterDate'>
@@ -86,7 +95,8 @@ const Filtro = () => {
               handleCompleteData()
             }
             filterByDate(getTime())
-            }} >
+            }} 
+            className={ `${ isActiveBtn[0] == true ? 'active' : '' }` }>
             Hoy
         </li>
         <li onClick={() => {
@@ -94,7 +104,8 @@ const Filtro = () => {
               handleCompleteData()
             }
             const [start, end] = getWeekDates();
-            filterByDateWeek([start, end])}} >
+            filterByDateWeek([start, end])}} 
+            className={ `${ isActiveBtn[1] == true ? 'active' : '' }` }>
           Esta semana
         </li>
         <li onClick={() => {
@@ -102,7 +113,8 @@ const Filtro = () => {
               handleCompleteData()
             }
             const currentMonth = new Date().getMonth();
-            filterByDateMonth(currentMonth)}} >
+            filterByDateMonth(currentMonth)}}
+            className={ `${ isActiveBtn[2] == true ? 'active' : '' }` }>
               Este mes
         </li>
       </ul>
