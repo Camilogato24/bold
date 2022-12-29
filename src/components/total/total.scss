@@ -1,6 +1,9 @@
 .card {
     background: #FFF;
     border-radius: 20px;
+    @media (max-width: 840px){
+        margin-top: 5vw;
+    }
     &__header {
         color: var(--color-white);
         background-image: var(--color-gradient-500);
@@ -10,6 +13,9 @@
         span {
             font-size: 1.6vw;
             font-weight: bold;
+            @media (max-width: 840px){
+                font-size: 3vw;
+            }
         }
         svg {
             position: absolute;
