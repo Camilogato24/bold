@@ -24,7 +24,7 @@ export const dataMock: Pay[] = [
     {
         id: 8887,
         transaction: 'Cobro exitoso',
-        date: '01/02/2023',
+        date: '1/02/2023',
         payMethod: '**** **** **** 7111',
         transactionId: 'GFGHGFHFG6565',
         amount: 25000,
@@ -34,7 +34,7 @@ export const dataMock: Pay[] = [
     {
         id: 1122,
         transaction: 'Cobro exitoso',
-        date: '01/05/2023',
+        date: '1/05/2023',
         payMethod: '**** **** **** 7111',
         transactionId: 'GFGHGFHFG6565',
         amount: 25000,
@@ -44,7 +44,7 @@ export const dataMock: Pay[] = [
     {
         id: 1119,
         transaction: 'Cobro exitoso',
-        date: '01/05/2023',
+        date: '1/05/2023',
         payMethod: '**** **** **** 7111',
         transactionId: 'GFGHGFHFG6565',
         amount: 25000,
