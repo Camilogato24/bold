@@ -1,4 +1,4 @@
-# Prueba Frontend Bold
+# Filter React/Vite
 
 _un proyecto realizado en ReactJS, con Typescript y Context API, comunicacion centralizada de los componentes, configuracion de tests unitarios mas no realizados_
 
